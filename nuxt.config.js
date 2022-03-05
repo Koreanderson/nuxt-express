@@ -33,6 +33,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '~/plugins/axios.js' }
   ],
 
   /*
@@ -53,9 +54,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://http.nuxtjs.org
-    '@nuxt/http'
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    // proxyHeaders: false
+  },
 
   /*
   ** Server Middleware

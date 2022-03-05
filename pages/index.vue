@@ -6,7 +6,6 @@
         nuxt-express
       </h1>
       <div>
-        {{ test }}
         <div class="links">
           <a
             href="/users"
@@ -17,22 +16,11 @@
         </div>
       </div>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+        <button
+          @click="getBusiness"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          Get Business
+        </button>
       </div>
     </div>
   </div>
@@ -40,10 +28,16 @@
 
 <script>
 export default {
-  async asyncData ({ $http }) {
-    const test = await $http.$get('/api/test')
-    return {
-      test
+  // async asyncData ({ $axios }) {
+  //   const test = await $axios.$get('/api/test')
+  //   return {
+  //     test
+  //   }
+  // },
+  methods: {
+    async getBusiness () {
+      const res = await this.$axios.get('/api/businesses')
+      console.log(res.data)
     }
   }
 }

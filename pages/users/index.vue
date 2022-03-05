@@ -21,8 +21,8 @@
 
 <script>
 export default {
-  async asyncData ({ $http }) {
-    const data = await $http.$get('/api/users')
+  async asyncData ({ $axios }) {
+    const data = await $axios.$get('/api/users')
     return { users: data }
   },
   head () {

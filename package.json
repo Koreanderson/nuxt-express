@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@nuxt/http": "latest",
+    "@nuxtjs/axios": "^5.13.6",
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
     "express": "latest",
     "nuxt": "latest"
   },

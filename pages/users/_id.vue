@@ -17,8 +17,8 @@
 
 <script>
 export default {
-  asyncData ({ params, error, $http }) {
-    return $http.$get('/api/users/' + params.id)
+  asyncData ({ params, error, $axios }) {
+    return $axios.$get('/api/users/' + params.id)
       .then((res) => {
         return { user: res }
       })
