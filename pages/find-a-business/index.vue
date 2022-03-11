@@ -30,6 +30,15 @@
 <script>
 export default {
   name: 'Business',
+  // async asyncData ({ $axios, params }) {
+  //   const post = await $axios.$get('/api/businesses', {
+  //     params: {
+  //       term: 'tacos',
+  //       zipcode: '19147'
+  //     }
+  //   })
+  //   return { post.businesses }
+  // },
   data () {
     return {
       zipcode: '',
@@ -39,13 +48,13 @@ export default {
   },
   methods: {
     async queryBusinesses (term, zipcode) {
-      const res = await this.$axios.get('/api/businesses', {
+      const res = await this.$axios.$get('/api/businesses', {
         params: {
           term,
           zipcode
         }
       })
-      this.businesses = res.data.businesses
+      this.businesses = res.businesses
     },
     onClick () {
       this.queryBusinesses(this.term, this.zipcode)

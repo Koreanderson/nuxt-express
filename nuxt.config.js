@@ -32,9 +32,7 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
-    { src: '~/plugins/axios.js' }
-  ],
+  plugins: ['~/plugins/axios.js'],
 
   /*
   ** Auto import components
@@ -47,6 +45,7 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/axios',
     '@nuxtjs/eslint-module'
   ],
 

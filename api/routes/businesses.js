@@ -1,7 +1,7 @@
 import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import axios from 'axios'
 const { Router } = require('express')
 const router = Router()
-const axios = require('axios')
 require('dotenv').config()
 
 // axios.get('https://api.yelp.com/v3/businesses/search', {
