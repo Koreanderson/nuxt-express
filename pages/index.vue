@@ -16,11 +16,7 @@
         </div>
       </div>
       <div class="links">
-        <button
-          @click="getBusiness"
-        >
-          Get Business
-        </button>
+        <NuxtLink class="button--green" to="/find-a-business">Find a Business</NuxtLink>
       </div>
     </div>
   </div>

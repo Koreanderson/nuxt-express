@@ -11,13 +11,14 @@ require('dotenv').config()
 // })
 
 router.get('/businesses', (req, res, next) => {
+  console.log(req.query)
   axios.get('https://api.yelp.com/v3/businesses/search', {
     headers: {
       Authorization: `Bearer ${process.env.YELP_API_KEY}`
     },
     params: {
-      term: 'cheesesteak',
-      location: '19147'
+      term: req.query.term,
+      location: req.query.zipcode
     }
   })
     .then(response => res.send(response.data))
