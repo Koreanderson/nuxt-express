@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="header">
+      <NuxtLink class="button--green" to="/">Home</NuxtLink>
+      <NuxtLink class="button--green" to="/login">Login</NuxtLink>
+      <NuxtLink class="button--green" to="/register">Register</NuxtLink>
+      <NuxtLink class="button--green" to="/secret">Secret</NuxtLink>
+      <NuxtLink class="button--green" to="/users">Users</NuxtLink>
+      <NuxtLink class="button--green" to="/find-a-business">Find a Business</NuxtLink>
+    </div>
     <Nuxt />
   </div>
 </template>
@@ -29,6 +37,14 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .button--green {

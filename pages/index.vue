@@ -5,19 +5,6 @@
       <h1 class="title">
         nuxt-express
       </h1>
-      <div>
-        <div class="links">
-          <a
-            href="/users"
-            class="button--green"
-          >
-            Users List
-          </a>
-        </div>
-      </div>
-      <div class="links">
-        <NuxtLink class="button--green" to="/find-a-business">Find a Business</NuxtLink>
-      </div>
     </div>
   </div>
 </template>
